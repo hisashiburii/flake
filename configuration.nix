@@ -124,6 +124,9 @@
   programs.thunar.enable = true;
   services.gvfs.enable = true; # mount trash etc
   services.tumbler.enable = true; # thumbnail support for images.
+  
+  # Enable NTFS to see Windows on file managers
+  boot.supportedFilesystems = [ "ntfs" ];  
 
   # Enable gtk portal for flameshot and other gtk apps
   services.dbus.enable = true;
