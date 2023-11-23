@@ -86,9 +86,11 @@
     vesktop
     hyprpaper
     grimblast
+    cmatrix
+    swaybg
   ];
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     iosevka
     jetbrains-mono
     font-awesome
@@ -117,6 +119,11 @@
   programs.hyprland.enable = true;
   # ..and waybar too
   programs.waybar.enable = true;
+
+  # Enable Thunar here because its dumb and doesnt like to be with the other packages.
+  programs.thunar.enable = true;
+  services.gvfs.enable = true; # mount trash etc
+  services.tumbler.enable = true; # thumbnail support for images.
 
   # Enable gtk portal for flameshot and other gtk apps
   services.dbus.enable = true;
