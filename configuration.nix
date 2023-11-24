@@ -88,6 +88,8 @@
     grimblast
     cmatrix
     swaybg
+    tty-clock
+    polkit_gnome
   ];
 
   fonts.packages = with pkgs; [
@@ -126,7 +128,9 @@
   services.tumbler.enable = true; # thumbnail support for images.
   
   # Enable NTFS to see Windows on file managers
-  boot.supportedFilesystems = [ "ntfs" ];  
+  boot.supportedFilesystems = [ "ntfs" ];
+  # Needed for much other things but its here mainly cause i need it to get into my windows drive 
+  security.polkit.enable = true;
 
   # Enable gtk portal for flameshot and other gtk apps
   services.dbus.enable = true;
