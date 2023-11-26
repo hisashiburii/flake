@@ -49,6 +49,7 @@
     description = "hisashiburi";
     extraGroups = ["networkmanager" "wheel" "audio"];
     packages = with pkgs; [];
+    shell = pkgs.fish;
   };
 
   # vesktop...
@@ -90,6 +91,13 @@
     swaybg
     tty-clock
     polkit_gnome
+    gimp
+    python3
+    (python311.withPackages (ps: with ps; [pip requests]))
+    piper
+    libratbag
+    aseprite # i will buy it someday i swear
+    feh
   ];
 
   fonts.packages = with pkgs; [
@@ -141,11 +149,8 @@
     extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment? i did !!
+  # Enable Fish Shell
+  programs.fish.enable = true;
+
+  system.stateVersion = "23.05"; # alot of yip yap about changing this just read the man config whatever
 }
