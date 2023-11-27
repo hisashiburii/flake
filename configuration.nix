@@ -61,17 +61,13 @@
   # god i love packages they are so sexy and amazing
   environment.systemPackages = with pkgs; [
     vim
-    alacritty
-    nitch
     discord
     firefox
     flameshot
     spotify
     unzip
     pavucontrol
-    spicetify-cli
     prismlauncher
-    gparted
     fuzzel
     neovim
     grim
@@ -80,8 +76,6 @@
     gh
     gcc
     hyfetch
-    wl-clipboard
-    jq
     libnotify
     kitty
     vesktop
@@ -89,17 +83,13 @@
     grimblast
     cmatrix
     swaybg
-    tty-clock
-    polkit_gnome
     gimp
     python3
-    (python311.withPackages (ps: with ps; [pip requests]))
     piper
     libratbag
     aseprite # i will buy it someday i swear
     feh
     exfat
-    etcher
   ];
 
   fonts.packages = with pkgs; [
