@@ -98,6 +98,8 @@
     libratbag
     aseprite # i will buy it someday i swear
     feh
+    exfat
+    etcher
   ];
 
   fonts.packages = with pkgs; [
@@ -106,6 +108,12 @@
     font-awesome
     (nerdfonts.override {fonts = ["Iosevka" "JetBrainsMono"];})
   ];
+
+  programs.steam = {
+    enable = true;
+    dedicatedServer.openFirewall = true;
+  };
+  hardware.opengl.driSupport32Bit = true;
 
   # pipewire
   security.rtkit.enable = true;
