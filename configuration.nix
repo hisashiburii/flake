@@ -90,6 +90,7 @@
     aseprite # i will buy it someday i swear
     feh
     exfat
+    htop
   ];
 
   fonts.packages = with pkgs; [
