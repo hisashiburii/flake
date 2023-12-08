@@ -106,6 +106,9 @@
   };
   hardware.opengl.driSupport32Bit = true;
 
+  # flatpak
+  services.flatpak.enable = true;
+
   # pipewire
   security.rtkit.enable = true;
   services.pipewire = {
