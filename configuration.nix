@@ -91,6 +91,11 @@
     feh
     exfat
     htop
+    heroic
+    libsForQt5.ark
+    killall
+    protonvpn-gui
+    qbittorrent
   ];
 
   fonts.packages = with pkgs; [
@@ -153,6 +158,11 @@
 
   # Enable Fish Shell
   programs.fish.enable = true;
+
+  # Insecure packages
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-24.8.6"
+  ];
 
   system.stateVersion = "23.05"; # alot of yip yap about changing this just read the man config whatever
 }
