@@ -81,6 +81,7 @@
     vesktop
     hyprpaper
     grimblast
+    wlogout
     cmatrix
     swaybg
     gimp
@@ -96,6 +97,7 @@
     killall
     protonvpn-gui
     qbittorrent
+    nitch
   ];
 
   fonts.packages = with pkgs; [
