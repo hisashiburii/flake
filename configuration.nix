@@ -63,9 +63,8 @@
     vim
     discord
     firefox
-    flameshot
     spotify
-    unzip
+    playerctl
     pavucontrol
     prismlauncher
     fuzzel
@@ -78,26 +77,22 @@
     hyfetch
     libnotify
     kitty
-    vesktop
-    hyprpaper
     grimblast
     wlogout
-    cmatrix
     swaybg
     gimp
     python3
     piper
     libratbag
-    aseprite # i will buy it someday i swear
     feh
     exfat
     htop
     heroic
     libsForQt5.ark
-    killall
-    protonvpn-gui
     qbittorrent
     nitch
+    (pkgs.callPackage ./catppuccin-sddm.nix {})
+    (discord.override {withVencord = true;})
   ];
 
   fonts.packages = with pkgs; [
@@ -132,7 +127,7 @@
 
   # enable sddm
   services.xserver.displayManager.sddm.enable = true;
-  # ..and its dumbass dependency.
+  # and xserver
   services.xserver.enable = true;
   # enable hyprland
   programs.hyprland.enable = true;
@@ -165,6 +160,8 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-24.8.6"
   ];
+
+  services.xserver.displayManager.sddm.theme = "catppuccin-mocha";
 
   system.stateVersion = "23.05"; # alot of yip yap about changing this just read the man config whatever
 }
