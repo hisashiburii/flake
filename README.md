@@ -1,4 +1,5 @@
-# nixos flake (or just plain nix you weirdo)
-hi welcome to a noobs version of a flake
+hey its my flake would you look at that!!
 
-this wouldn't be possible without the help of my lord and savior getchoo :3
+don't use this please or reference it use someone else's ([my friend getchoos flake is a very good example](https://github.com/getchoo/flake))
+
+my ([dotfiles](https://github.com/hisashiburii/dotfiles))

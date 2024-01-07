@@ -61,9 +61,9 @@
   # god i love packages they are so sexy and amazing
   environment.systemPackages = with pkgs; [
     vim
-    discord
     firefox
     spotify
+    sptlrx
     playerctl
     pavucontrol
     prismlauncher
