@@ -63,6 +63,7 @@
     vim
     firefox
     spotify
+    spicetify-cli
     sptlrx
     playerctl
     pavucontrol
@@ -98,6 +99,8 @@
     dunst
     appimage-run
     lutris
+    pipes
+    cbonsai
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
@@ -167,7 +170,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-24.8.6"
   ];
-
+  
   services.xserver.displayManager.sddm.theme = "catppuccin-mocha";
 
   nix.settings.trusted-users = ["hisa"];
