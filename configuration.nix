@@ -91,6 +91,13 @@
     libsForQt5.ark
     qbittorrent
     nitch
+    neo-cowsay
+    obs-studio
+    vlc
+    caprine-bin
+    dunst
+    appimage-run
+    lutris
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
@@ -162,6 +169,8 @@
   ];
 
   services.xserver.displayManager.sddm.theme = "catppuccin-mocha";
+
+  nix.settings.trusted-users = ["hisa"];
 
   system.stateVersion = "23.05"; # alot of yip yap about changing this just read the man config whatever
 }
