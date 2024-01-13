@@ -101,6 +101,8 @@
     lutris
     pipes
     cbonsai
+    protontricks
+    yad
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
