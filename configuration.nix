@@ -9,6 +9,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./comma.nix
   ];
 
   # Bootloader.
@@ -176,6 +177,8 @@
   services.xserver.displayManager.sddm.theme = "catppuccin-mocha";
 
   nix.settings.trusted-users = ["hisa"];
+
+  programs.command-not-found.enable = false;
 
   system.stateVersion = "23.05"; # alot of yip yap about changing this just read the man config whatever
 }
