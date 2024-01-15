@@ -104,6 +104,7 @@
     cbonsai
     protontricks
     yad
+    bat
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
