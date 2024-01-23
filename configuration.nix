@@ -10,7 +10,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./comma.nix
-  ];
+    ./hm.nix
+  ]; 
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -70,48 +71,37 @@
     pavucontrol
     prismlauncher
     fuzzel
-    neovim
     grim
     slurp
-    git
-    gh
     gcc
     hyfetch
     libnotify
-    kitty
     grimblast
-    wlogout
     swaybg
     gimp
     python3
     piper
     libratbag
-    feh
     exfat
-    htop
     heroic
     libsForQt5.ark
     qbittorrent
     nitch
     neo-cowsay
-    obs-studio
     vlc
     caprine-bin
-    dunst
     appimage-run
     lutris
     pipes
     cbonsai
     protontricks
     yad
-    bat
     jdk17
     osu-lazer-bin
     rsync
     parted
     ventoy-full
     hyprpaper
-    vscode
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
