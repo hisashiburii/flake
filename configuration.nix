@@ -105,6 +105,13 @@
     protontricks
     yad
     bat
+    jdk17
+    osu-lazer-bin
+    rsync
+    parted
+    ventoy-full
+    hyprpaper
+    vscode
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
