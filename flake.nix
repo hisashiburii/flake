@@ -17,7 +17,7 @@
   outputs = {nixpkgs, ...} @ inputs: {
     nixosConfigurations."quack" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [./configuration.nix];
+      modules = [./configuration.nix ./home.nix];
       specialArgs = {inherit inputs;};
     };
   };
