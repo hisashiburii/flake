@@ -102,6 +102,7 @@
     parted
     ventoy-full
     hyprpaper
+    cinnamon.nemo
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
@@ -163,9 +164,6 @@
     # finallyu the gtk portal
     extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
-
-  # Enable Fish Shell
-  programs.fish.enable = true;
 
   # Insecure packages
   nixpkgs.config.permittedInsecurePackages = [
