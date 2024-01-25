@@ -103,6 +103,7 @@
     ventoy-full
     hyprpaper
     cinnamon.nemo
+    obsidian
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
@@ -170,6 +171,7 @@
   # Insecure packages
   nixpkgs.config.permittedInsecurePackages = [
     "electron-24.8.6"
+    "electron-25.9.0"
   ];
   
   services.xserver.displayManager.sddm.theme = "catppuccin-mocha";
