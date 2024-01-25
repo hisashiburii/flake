@@ -132,6 +132,8 @@
     pulse.enable = true;
   };
 
+  programs.fish.enable = true;
+
   hardware.pulseaudio.enable = false;
 
   # enable nix-command

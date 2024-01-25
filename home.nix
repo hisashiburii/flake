@@ -34,8 +34,6 @@
 
     programs.bat.enable = true;
 
-    programs.fish.enable = true;
-
     programs.vscode.enable = true;
     programs.vscode.package = pkgs.vscode.fhs;
 
