@@ -104,6 +104,7 @@
     hyprpaper
     cinnamon.nemo
     obsidian
+    ffmpeg
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
