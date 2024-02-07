@@ -141,14 +141,10 @@
   # enable nix-command
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # enable sddm
-  services.xserver.displayManager.sddm.enable = true;
-  # and xserver
+  # enable GNOME and depends (im breaking free)
   services.xserver.enable = true;
-  # enable hyprland
-  programs.hyprland.enable = true;
-  # ..and waybar too
-  programs.waybar.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Enable Thunar here because its dumb and doesnt like to be with the other packages.
   programs.thunar.enable = true;
