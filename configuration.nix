@@ -107,6 +107,7 @@
     obsidian
     ffmpeg
     blackbox-terminal
+    starship
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];

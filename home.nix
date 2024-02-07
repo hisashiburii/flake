@@ -30,6 +30,16 @@
     # GNOME Dark Mode
     dconf = {
       enable = true;
-      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+      settings = {
+        "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+        
+        "com/raggesilver/BlackBox" = {
+          font = "Source Code Pro 12";
+          theme-dark = "Dracula";
+          terminal-bell = false;
+          pretty = true;
+          easy-copy-paste = true;
+        };
+      };
     };
 }
