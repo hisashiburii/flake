@@ -2,16 +2,6 @@
 
     home.stateVersion = "24.05";
 
-    programs.kitty = {
-        settings = {
-            confirm_os_window_close = 0;
-        };
-
-        enable = true;
-
-        theme = "Catppuccin-Mocha";
-    };
-
     programs.neovim = {
         enable = true;
     };
@@ -36,5 +26,10 @@
 
     programs.vscode.enable = true;
     programs.vscode.package = pkgs.vscode.fhs;
-
+    
+    # GNOME Dark Mode
+    dconf = {
+      enable = true;
+      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    };
 }

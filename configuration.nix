@@ -4,6 +4,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
@@ -105,6 +106,7 @@
     cinnamon.nemo
     obsidian
     ffmpeg
+    blackbox-terminal
     (pkgs.callPackage ./catppuccin-sddm.nix {})
     (discord.override {withVencord = true;})
   ];
@@ -139,7 +141,7 @@
   hardware.pulseaudio.enable = false;
 
   # enable nix-command
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  
 
   # enable GNOME and depends (im breaking free)
   services.xserver.enable = true;
@@ -181,7 +183,6 @@
     enable = true;
     wlr.enable = true;
     # finallyu the gtk portal
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
   # Insecure packages
@@ -192,9 +193,18 @@
   
   services.xserver.displayManager.sddm.theme = "catppuccin-mocha";
 
-  nix.settings.trusted-users = ["hisa"];
+  nix = {
+    settings = {
+      experimental-features = ["nix-command" "flakes"];
+      trusted-users = [ "hisa" ];
+    };
+    registry.n.flake = inputs.nixpkgs;
+  };
 
   programs.command-not-found.enable = false;
+
+  # shorten nixpkgs to "n"
+  
 
   system.stateVersion = "23.05"; # alot of yip yap about changing this just read the man config whatever
 }
