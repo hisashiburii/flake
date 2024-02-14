@@ -27,19 +27,11 @@
     programs.vscode.enable = true;
     programs.vscode.package = pkgs.vscode.fhs;
     
-    # GNOME Dark Mode
-    dconf = {
+    # hyprland shit
+    wayland.windowManager.hyprland = {
       enable = true;
-      settings = {
-        "org/gnome/desktop/interface".color-scheme = "prefer-dark";
-        
-        "com/raggesilver/BlackBox" = {
-          font = "Source Code Pro 12";
-          theme-dark = "Dracula";
-          terminal-bell = false;
-          pretty = true;
-          easy-copy-paste = true;
-        };
-      };
+      packages = pkgs.hyprland;
+
+      systemd.enable = true;
     };
 }
