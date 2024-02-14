@@ -141,33 +141,6 @@
 
   hardware.pulseaudio.enable = false;
 
-  # enable nix-command
-  
-
-  # enable GNOME and depends (im breaking free)
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # some GNOME shenanigans
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-  ]) ++ (with pkgs.gnome; [
-    cheese # webcam tool
-    gnome-music
-    gnome-terminal
-    epiphany # web browser
-    geary # email reader
-    evince # document viewer
-    gnome-characters
-    totem # video player
-    tali # poker game
-    iagno # go game
-    hitori # sudoku game
-    atomix # puzzle game
-  ]);
-
   # Enable Thunar here because its dumb and doesnt like to be with the other packages.
   programs.thunar.enable = true;
   services.gvfs.enable = true; # mount trash etc
